@@ -47,6 +47,3 @@ def sort_patients(sort_by: str = Query(..., description="On basis of height, wei
     sorted_data = sorted(data.values(), key=lambda x: x.get("height" ,0) ,reverse = sort_order)
 
     return sorted_data
-
-
-
