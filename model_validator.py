@@ -17,10 +17,16 @@ class Patient(BaseModel):
             raise ValueError('Patients older than 60 must have an emergency contact')
         return model
 
+'''Field validators (@field_validator) check:
 
+Only one field at a time
+Example: only age or only email
+
+But here your rule is:
+
+If age > 60, then contact_details must contain 'emergency' '''
 
 def update_patient_data(patient: Patient):
-
     print(patient.name)
     print(patient.age)
     print(patient.allergies)
