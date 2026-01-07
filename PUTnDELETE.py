@@ -151,7 +151,7 @@ def delete_patient(patient_id: str):
     # load data
     data = load_data()
 
-    if patient_id not in data:
+    if patient_id not in data: 
         raise HTTPException(status_code=404, detail='Patient not found')
     
     del data[patient_id]
